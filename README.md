@@ -1,4 +1,4 @@
-# Caching DNS Server in Scala
+# Caching DNS Server in Scala <img src="https://github.com/devicons/devicon/blob/master/icons/scala/scala-original.svg" title="scala" alt="scala" width="40" height="40"/>&nbsp;
 This project implements a caching DNS server written in Scala using the cats-effect library. It provides functionalities for resolving domain names from IP addresses and leverages a cache to improve performance by storing previously resolved entries.
 
 ### Project's components:
