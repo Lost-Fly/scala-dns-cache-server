@@ -1,0 +1,20 @@
+[debug] [zinc] IncrementalCompile -----------
+[debug] IncrementalCompile.incrementalCompile
+[debug] previous = Stamps for: 0 products, 0 sources, 0 libraries
+[debug] current source = Set(${BASE}/src/main/scala/com/lostfly/dns/DnsCache.scala, ${BASE}/src/main/scala/com/lostfly/dns/DnsResolver.scala, ${BASE}/src/main/scala/com/lostfly/dns/DnsServer.scala, ${BASE}/src/main/scala/com/lostfly/dns/Main.scala)
+[debug] > initialChanges = InitialChanges(Changes(added = Set(${BASE}/src/main/scala/com/lostfly/dns/DnsResolver.scala, ${BASE}/src/main/scala/com/lostfly/dns/DnsServer.scala, ${BASE}/src/main/scala/com/lostfly/dns/Main.scala, ${BASE}/src/main/scala/com/lostfly/dns/DnsCache.scala), removed = Set(), changed = Set(), unmodified = ...),Set(),Set(),API Changes: Set())
+[debug] Full compilation, no sources in previous analysis.
+[debug] all 4 sources are invalidated
+[debug] Initial set of included nodes: 
+[debug] Recompiling all sources: number of invalidated sources > 50.0 percent of all sources
+[debug] compilation cycle 1
+[info] compiling 4 Scala sources to C:\Users\karam\OneDrive\Рабочий стол\HOW TO USE HIBERNATE\ScalaDNS\dns-server\target\scala-2.13\classes ...
+[debug] Returning already retrieved and compiled bridge: C:\Users\karam\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala2-sbt-bridge\2.13.13\scala2-sbt-bridge-2.13.13.jar.
+[debug] [zinc] Running cached compiler 2992aa4 for Scala compiler version 2.13.13
+[debug] [zinc] The Scala compiler is invoked with:
+[debug] 	-bootclasspath
+[debug] 	C:\Users\karam\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\scala-lang\scala-library\2.13.13\scala-library-2.13.13.jar
+[debug] 	-classpath
+[debug] 	C:\Users\karam\OneDrive\Рабочий стол\HOW TO USE HIBERNATE\ScalaDNS\dns-server\target\scala-2.13\classes;C:\Users\karam\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\typelevel\cats-effect_2.13\3.4.0\cats-effect_2.13-3.4.0.jar;C:\Users\karam\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\dev\zio\zio_2.13\2.0.21\zio_2.13-2.0.21.jar;C:\Users\karam\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\dev\zio\zio-interop-cats_2.13\23.1.0.0\zio-interop-cats_2.13-23.1.0.0.jar;C:\Users\karam\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\dnsjava\dnsjava\3.5.3\dnsjava-3.5.3.jar;C:\Users\karam\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\typelevel\cats-effect-kernel_2.13\3.4.0\cats-effect-kernel_2.13-3.4.0.jar;C:\Users\karam\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\typelevel\cats-effect-std_2.13\3.4.0\cats-effect-std_2.13-3.4.0.jar;C:\Users\karam\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\dev\zio\zio-internal-macros_2.13\2.0.21\zio-internal-macros_2.13-2.0.21.jar;C:\Users\karam\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\dev\zio\zio-stacktracer_2.13\2.0.21\zio-stacktracer_2.13-2.0.21.jar;C:\Users\karam\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\dev\zio\izumi-reflect_2.13\2.3.8\izumi-reflect_2.13-2.3.8.jar;C:\Users\karam\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\dev\zio\zio-interop-tracer_2.13\23.1.0.0\zio-interop-tracer_2.13-23.1.0.0.jar;C:\Users\karam\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar;C:\Users\karam\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\typelevel\cats-core_2.13\2.9.0\cats-core_2.13-2.9.0.jar;C:\Users\karam\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\dev\zio\izumi-reflect-thirdparty-boopickle-shaded_2.13\2.3.8\izumi-reflect-thirdparty-boopickle-shaded_2.13-2.3.8.jar;C:\Users\karam\AppData\Local\Coursier\Cache\v1\https\repo1.maven.org\maven2\org\typelevel\cats-kernel_2.13\2.9.0\cats-kernel_2.13-2.9.0.jar
+[debug] Scala compilation took 6.0535384 s
+[info] done compiling
