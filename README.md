@@ -38,6 +38,8 @@ Otherwise, it queries the external DNS server (externalDns.resolve(ip)) using Go
 - Functional Programming: Utilizes cats-effect for a functional approach, leading to potentially cleaner code and improved error handling.
 - Caching: Improves performance by reusing previously resolved entries, reducing load on external DNS servers.
 - Modular Design: Components like DnsCache and DnsResolver are separate classes, promoting code reusability and maintainability.
+- Resiliency with Secondary DNS Servers: Enhances system reliability by utilizing backup servers in case the primary DNS server fails.
+- Support for both IP Addresses and Domain Names: The server can perform both forward and reverse lookups, providing information about IP addresses from domain names and vice versa.
 ### Libraries and Technologies:
 
 - Scala: Functional programming language for building the server application.
@@ -47,6 +49,7 @@ Otherwise, it queries the external DNS server (externalDns.resolve(ip)) using Go
 
 The provided log snippet demonstrates the server's behavior:
 
+### Getting PTR-Type request:
 The client makes a request with IP 217.69.139.200 (not yet in cache)
 ```
 DnsServer: Received request from 127.0.0.1: resolving address 217.69.139.200
@@ -65,4 +68,25 @@ DnsCache: Looking for 217.69.139.200. Found: true
 DnsResolver: Found 217.69.139.200 -> mail.ru. in cache
 DnsServer: Sending response: mail.ru.
 ```
+
+### Getting A-Type request:
+The client makes a request with Domain auto.ru (not yet in cache)
+```
+DnsServer: Received request from 127.0.0.1: resolving address auto.ru
+DnsCache: Looking for auto.ru. Found: false
+DnsResolver: auto.ru not found in cache, querying external DNS
+DnsResolver: A-Type request to 8.8.8.8 DNS, request domain auto.ru
+DnsCache: Added PTR record auto.ru -> 213.180.204.188 to cache
+DnsCache: Added A record 213.180.204.188 -> auto.ru to cache
+DnsServer: Sending response: 213.180.204.188
+```
+
+The client again makes a request with Domain auto.ru (already in cache)
+```
+DnsServer: Received request from 127.0.0.1: resolving address auto.ru
+DnsCache: Looking for auto.ru. Found: true
+DnsResolver: Found auto.ru -> 213.180.204.188 in cache
+DnsServer: Sending response: 213.180.204.188
+```
+
 This project showcases a basic functional caching DNS server in Scala using cats-effect. It demonstrates potential benefits like improved performance through caching and utilizes libraries designed for asynchronous programming.
