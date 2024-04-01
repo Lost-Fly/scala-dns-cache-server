@@ -16,7 +16,7 @@ This project implements a caching DNS server written in Scala using the cats-eff
 - If the domain name is found in the cache (Some(domain)), it returns the cached value directly.
 Otherwise, it queries the external DNS server (externalDns.resolve(ip)) using GoogleExternalDnsResolver.
 - Upon successful external resolution, it updates the cache (cache.put(ip, domain)) and returns the resolved domain name.
-### 3) GoogleExternalDnsResolver:
+### 3) ExternalDnsResolver:
   
 - Uses the org.xbill.DNS library for interacting with external DNS servers.
 - Performs a reverse DNS lookup for the given IP address.
